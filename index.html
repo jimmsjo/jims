@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach Livskraft</title>
+  <style>
+    :root {
+      --main-color: #2c3e50;
+      --accent-color: #4a90e2;
+      --light-bg: #f4f6f8;
+      --text-color: #333;
+      --card-bg: #ffffff;
+    }
+
+    body.dark {
+      --main-color: #ecf0f1;
+      --accent-color: #4a90e2;
+      --light-bg: #1e1e1e;
+      --text-color: #ecf0f1;
+      --card-bg: #2a2a2a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      line-height: 1.7;
+    }
+
+    header {
+      background: url('https://picsum.photos/id/1011/1600/800') center/cover no-repeat;
+      height: 80vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .links a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--main-color);
+      font-weight: 600;
+    }
+
+    #themeToggle {
+      padding: 0.5rem 1rem;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      color: var(--main-color);
+    }
+
+    #tjanster .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-box {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: background-color 0.3s ease;
+    }
+
+    .service-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .cta {
+      text-align: center;
+      background-color: var(--accent-color);
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+    }
+
+    .cta h2 {
+      margin-bottom: 1rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    footer a {
+      color: #eee;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Coach Livskraft</h1>
+    <p>Personlig utveckling för ett balanserat liv</p>
+  </header>
+
+  <nav>
+    <div class="links">
+      <a href="#om">Om mig</a>
+      <a href="#tjanster">Tjänster</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <button id="themeToggle">Dark Mode</button>
+  </nav>
+
+  <section id="om">
+    <h2>Om mig</h2>
+    <p>Jag heter Anna och är  livscoach. Min passion är att hjälpa människor att hitta balans, mål och riktning i livet.</p>
+    <img 
+      src="https://picsum.photos/id/1005/800/400" 
+      alt="Coachande samtal"
+      style="margin-top: 2rem; border-radius: 8px; width: 100%;"
+      loading="lazy">
+  </section>
+
+  <section id="tjanster">
+    <h2>Tjänster</h2>
+    <div class="grid">
+      <div class="service-box">
+        <img src="https://picsum.photos/id/1012/400/300" alt="Livscoaching" loading="lazy" />
+        <h3>🌱 Livscoaching</h3>
+        <p>Utforska vem du är och vad du vill. Hitta balans, riktning och motivation.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://picsum.photos/id/82/400/300" alt="Mediation" loading="lazy" />
+        <h3>💼 Mediation </h3>
+        <p>Få stöd i karriärval, jobbbyte, intervjuträning eller att våga ta steget.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://picsum.photos/id/1015/400/300" alt="Stresshantering" loading="lazy" />
+        <h3>🧘 Stresshantering</h3>
+        <p>Lär dig tekniker för återhämtning, gränssättning och ett lugnare sinne.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="kontakt">
+    <h2>Redo att ta nästa steg?</h2>
+    <p>Boka ett gratis introsamtal och låt oss se om coaching är rätt för dig.</p>
+    <a href="mailto:kontakt@coachlivskraft.se">Kontakta mig</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Coach Livskraft | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? 'Ljust läge' : 'Dark Mode';
+    });
+  </script>
+
+</body>
+</html>
